@@ -45,6 +45,20 @@ Soma de `vlrLiquido` por identificador de deputado e UF no período completo. O 
 | Sul | Afonso Motta | RS | PDT | R$ 3.052.530,96 |
 | Sul | Bibo Nunes | RS | PL | R$ 2.994.970,64 |
 
+### Leitura inicial do ranking
+
+Os vinte parlamentares listados tiveram registros nos seis anos analisados, então a comparação acumulada não se explica apenas por diferenças no número de anos com dados. A distância entre o primeiro e o quarto colocado varia bastante entre regiões:
+
+| Região | Maior acumulado | Quarto colocado | Diferença entre eles | Leitura |
+|---|---:|---:|---:|---|
+| Centro-Oeste | Beto Pereira, MS | José Medeiros, MT | R$ 319.553,65 (10,3% do líder) | Maior dispersão relativa; os três primeiros são de MS. |
+| Nordeste | João Maia, RN | Wellington Roberto, PB | R$ 154.222,93 (4,6% do líder) | Ranking relativamente concentrado; os dois primeiros são do RN. |
+| Norte | Acácio Favacho, AP | Olival Marques, PA | R$ 18.195,39 (0,6% do líder) | Menor dispersão; os quatro valores são muito próximos. |
+| Sudeste | Capitão Augusto, SP | Da Vitoria, ES | R$ 103.020,38 (3,5% do líder) | Valores próximos; os dois primeiros são de SP. |
+| Sul | Pompeo de Mattos, RS | Bibo Nunes, RS | R$ 320.982,28 (9,7% do líder) | Maior diferença absoluta; os quatro primeiros são do RS. |
+
+João Maia (Nordeste) e Pompeo de Mattos (Sul) são os dois maiores valores regionais e diferem por apenas **R$ 1.256,96** no acumulado de seis anos. A concentração por UF descreve apenas a composição deste ranking de maiores gastos; não significa, por si só, que a mesma UF lidere o gasto total da região ou que exista irregularidade.
+
 ## Anomalias para revisão
 
 A triagem foi feita dentro de cada categoria e ano, sinalizando valores acima de `Q3 + 3 × IQR`. Entre os maiores casos identificados:
