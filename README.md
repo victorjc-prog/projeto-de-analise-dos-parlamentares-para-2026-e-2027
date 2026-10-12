@@ -1,4 +1,5 @@
-[README_GitHub.md](https://github.com/user-attachments/files/33358403/README_GitHub.md)
+[README_GitHub.md](https://github.com/user-attachments/files/33359132/README_GitHub.md)
+
 # Análise de despesas parlamentares (2020–2025)
 
 Projeto de análise dos gastos registrados pela Câmara dos Deputados, com consolidação por parlamentar e região, análise de tendências, triagem estatística de lançamentos atípicos e projeção exploratória para 2026–2027.
@@ -27,7 +28,7 @@ A leitura de todos os arquivos pode levar alguns minutos, dependendo do computad
 - **Gasto:** soma de `vlrLiquido`, após glosas. Glosas e restituições são exibidas separadamente e não são subtraídas novamente.
 - **Região e ranking:** a UF do parlamentar é mapeada para uma das cinco regiões; os quatro maiores gastos acumulados são selecionados por região usando o identificador do deputado e a UF.
 - **Anomalias:** triagem por categoria e ano, sinalizando valores acima de `Q3 + 3 × IQR`. São candidatos para conferência documental, não evidência de irregularidade.
-- **Previsão:** regressão Ridge padronizada em painel anual regional, usando tendência temporal e valores dos anos anteriores. A estimativa é nominal, recursiva e não é individual por parlamentar.
+- **Previsão:** regressão Ridge regularizada por parlamentar, com efeito individual e tendência anual, ajustada aos gastos de 2020–2025. As previsões abaixo cobrem somente os quatro maiores de cada região.
 
 ## Principais resultados
 
@@ -57,17 +58,46 @@ Os vinte parlamentares do ranking tiveram registros nos seis anos analisados, re
 
 João Maia (Nordeste) e Pompeo de Mattos (Sul) são os dois maiores valores regionais e diferem por apenas **R$ 1.256,96** no acumulado de seis anos. A concentração por UF descreve somente a composição deste ranking, não o gasto total de cada estado nem evidência de irregularidade.
 
-Projeção exploratória do modelo Ridge:
+### Previsões individuais para os 20 parlamentares
 
-| Região | 2026 (R$ milhões) | 2027 (R$ milhões) |
+Valores anuais estimados para cada um dos quatro maiores gastos de cada região. São previsões nominais, sem correção pela inflação.
+
+| Região | Parlamentar | UF | 2026 | 2027 |
+|---|---|---:|---:|---:|
+| Norte | Acácio Favacho | AP | R$ 563.647,63 | R$ 575.246,14 |
+| Norte | Delegado Éder Mauro | PA | R$ 563.024,55 | R$ 574.623,05 |
+| Norte | Sidney Leite | AM | R$ 562.753,58 | R$ 574.352,09 |
+| Norte | Olival Marques | PA | R$ 561.955,04 | R$ 573.553,54 |
+| Nordeste | João Maia | RN | R$ 575.228,59 | R$ 586.827,10 |
+| Nordeste | General Girão | RN | R$ 570.915,50 | R$ 582.514,01 |
+| Nordeste | Flávio Nogueira | PI | R$ 562.493,49 | R$ 574.092,00 |
+| Nordeste | Wellington Roberto | PB | R$ 560.882,27 | R$ 572.480,78 |
+| Centro-Oeste | Beto Pereira | MS | R$ 555.474,02 | R$ 567.072,53 |
+| Centro-Oeste | Dagoberto Nogueira | MS | R$ 549.213,85 | R$ 560.812,36 |
+| Centro-Oeste | Vander Loubet | MS | R$ 537.659,96 | R$ 549.258,47 |
+| Centro-Oeste | José Medeiros | MT | R$ 525.748,10 | R$ 537.346,61 |
+| Sudeste | Capitão Augusto | SP | R$ 537.006,02 | R$ 548.604,53 |
+| Sudeste | Cezinha de Madureira | SP | R$ 535.101,26 | R$ 546.699,77 |
+| Sudeste | Odair Cunha | MG | R$ 527.797,46 | R$ 539.395,97 |
+| Sudeste | Da Vitoria | ES | R$ 527.422,73 | R$ 539.021,24 |
+| Sul | Pompeo de Mattos | RS | R$ 575.111,66 | R$ 586.710,17 |
+| Sul | Giovani Cherini | RS | R$ 556.614,87 | R$ 568.213,38 |
+| Sul | Afonso Motta | RS | R$ 550.607,30 | R$ 562.205,80 |
+| Sul | Bibo Nunes | RS | R$ 545.252,85 | R$ 556.851,36 |
+
+Subtotal estimado apenas para os quatro parlamentares selecionados em cada região:
+
+| Região | 2026 | 2027 |
 |---|---:|---:|
-| Norte | 34,55 | 36,19 |
-| Nordeste | 70,24 | 68,29 |
-| Centro-Oeste | 22,69 | 25,09 |
-| Sudeste | 73,15 | 70,76 |
-| Sul | 38,03 | 39,02 |
-| **Total** | **238,66** | **239,35** |
+| Norte | R$ 2.251.380,80 | R$ 2.297.774,83 |
+| Nordeste | R$ 2.269.519,86 | R$ 2.315.913,89 |
+| Centro-Oeste | R$ 2.168.095,93 | R$ 2.214.489,96 |
+| Sudeste | R$ 2.127.327,47 | R$ 2.173.721,51 |
+| Sul | R$ 2.227.586,68 | R$ 2.273.980,71 |
+| **Total dos 20** | **R$ 11.043.910,73** | **R$ 11.275.880,90** |
 
-No teste temporal com 2025 como período de validação, o Ridge teve WAPE de **7,62%**; o baseline de repetir o gasto de 2024 teve **4,22%**. Assim, a projeção de ML deve ser tratada como cenário exploratório, não como previsão confiável para orçamento. O histórico é curto e não há ajuste pela inflação.
+Os subtotais regionais e o total dos parlamentares são arredondados independentemente; pode haver diferença de R$ 0,01 ao somar as linhas exibidas.
+
+Nos backtests de origem móvel, em 2024 o Ridge teve WAPE de **5,12%**, contra **4,38%** do baseline de repetir o gasto do ano anterior; em 2025, o Ridge teve **5,28%**, contra **6,11%** do baseline. Combinados, os erros foram praticamente iguais: **5,20% para Ridge e 5,22% para o baseline**. A amostra tem apenas seis observações anuais por parlamentar; as projeções são exploratórias, não previsão garantida de orçamento. Os subtotais não representam a despesa total das regiões nem de toda a Câmara.
 
 A triagem estatística apontou, entre outros casos, um lançamento de **R$ 184.428,00** na categoria de divulgação parlamentar em 2024. O valor requer verificação da documentação e do contexto antes de qualquer conclusão.
