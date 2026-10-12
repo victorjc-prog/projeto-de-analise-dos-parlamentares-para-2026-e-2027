@@ -72,20 +72,51 @@ A triagem foi feita dentro de cada categoria e ano, sinalizando valores acima de
 
 O limite de triagem para o primeiro caso foi R$ 27.880,00. Esses valores são **alertas estatísticos**, não evidência de irregularidade; precisam ser avaliados junto aos documentos, fornecedores e períodos cobertos. O método gera milhares de candidatos por ano e serve para priorizar conferências.
 
-## Projeção exploratória para 2026–2027
+## Previsão individual para 2026–2027
 
-Foi usado um modelo Ridge padronizado em um painel anual por região, com tendência temporal e valores dos anos anteriores. A previsão é recursiva, nominal e não individual por parlamentar.
+Foi ajustado um modelo Ridge regularizado por parlamentar, com efeito individual e tendência anual, usando os gastos líquidos anuais de 2020 a 2025. A tabela mostra previsões individuais para os quatro maiores acumulados de cada região. Valores nominais, sem correção pela inflação.
 
-| Região | 2026 (R$ milhões) | 2027 (R$ milhões) |
+| Região | Parlamentar | UF | 2026 | 2027 |
+|---|---|---:|---:|---:|
+| Norte | Acácio Favacho | AP | R$ 563.647,63 | R$ 575.246,14 |
+| Norte | Delegado Éder Mauro | PA | R$ 563.024,55 | R$ 574.623,05 |
+| Norte | Sidney Leite | AM | R$ 562.753,58 | R$ 574.352,09 |
+| Norte | Olival Marques | PA | R$ 561.955,04 | R$ 573.553,54 |
+| Nordeste | João Maia | RN | R$ 575.228,59 | R$ 586.827,10 |
+| Nordeste | General Girão | RN | R$ 570.915,50 | R$ 582.514,01 |
+| Nordeste | Flávio Nogueira | PI | R$ 562.493,49 | R$ 574.092,00 |
+| Nordeste | Wellington Roberto | PB | R$ 560.882,27 | R$ 572.480,78 |
+| Centro-Oeste | Beto Pereira | MS | R$ 555.474,02 | R$ 567.072,53 |
+| Centro-Oeste | Dagoberto Nogueira | MS | R$ 549.213,85 | R$ 560.812,36 |
+| Centro-Oeste | Vander Loubet | MS | R$ 537.659,96 | R$ 549.258,47 |
+| Centro-Oeste | José Medeiros | MT | R$ 525.748,10 | R$ 537.346,61 |
+| Sudeste | Capitão Augusto | SP | R$ 537.006,02 | R$ 548.604,53 |
+| Sudeste | Cezinha de Madureira | SP | R$ 535.101,26 | R$ 546.699,77 |
+| Sudeste | Odair Cunha | MG | R$ 527.797,46 | R$ 539.395,97 |
+| Sudeste | Da Vitoria | ES | R$ 527.422,73 | R$ 539.021,24 |
+| Sul | Pompeo de Mattos | RS | R$ 575.111,66 | R$ 586.710,17 |
+| Sul | Giovani Cherini | RS | R$ 556.614,87 | R$ 568.213,38 |
+| Sul | Afonso Motta | RS | R$ 550.607,30 | R$ 562.205,80 |
+| Sul | Bibo Nunes | RS | R$ 545.252,85 | R$ 556.851,36 |
+
+Subtotal estimado apenas para o top 4 de cada região:
+
+| Região | 2026 | 2027 |
 |---|---:|---:|
-| Norte | 34,55 | 36,19 |
-| Nordeste | 70,24 | 68,29 |
-| Centro-Oeste | 22,69 | 25,09 |
-| Sudeste | 73,15 | 70,76 |
-| Sul | 38,03 | 39,02 |
-| **Total** | **238,66** | **239,35** |
+| Norte | R$ 2.251.380,80 | R$ 2.297.774,83 |
+| Nordeste | R$ 2.269.519,86 | R$ 2.315.913,89 |
+| Centro-Oeste | R$ 2.168.095,93 | R$ 2.214.489,96 |
+| Sudeste | R$ 2.127.327,47 | R$ 2.173.721,51 |
+| Sul | R$ 2.227.586,68 | R$ 2.273.980,71 |
+| **Total dos 20 parlamentares** | **R$ 11.043.910,73** | **R$ 11.275.880,90** |
 
-Na validação temporal com 2025 como período de teste, o Ridge teve WAPE de **7,62%**. O baseline de repetir o valor de 2024 teve **4,22%**, sendo mais preciso nesse teste. Como há apenas seis anos de histórico e um único ano de validação, os números de 2026–2027 devem ser tratados como cenário exploratório, não como previsão confiável para orçamento. Recomenda-se ampliar o histórico e executar backtests em vários períodos antes de usar o modelo em decisões.
+Os subtotais regionais e o total dos parlamentares são arredondados independentemente; pode haver diferença de R$ 0,01 ao somar as linhas exibidas.
+
+### Validação e limitações
+
+Backtests de origem móvel: 2024 teve WAPE de **5,12%** para Ridge e **4,38%** para o baseline de repetir o gasto do ano anterior; 2025 teve **5,28%** para Ridge e **6,11%** para o baseline. Combinando os dois anos, o Ridge marcou **5,20%** e o baseline **5,22%**. O desempenho é praticamente empatado, sem evidência de vantagem robusta do ML.
+
+O histórico tem somente seis observações anuais por parlamentar. As previsões são cenários exploratórios, não valores garantidos para orçamento. Os subtotais cobrem apenas estes vinte parlamentares, não toda a despesa das regiões ou da Câmara.
 
 ## Reproduzir
 
