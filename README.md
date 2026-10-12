@@ -1,4 +1,4 @@
-[README_GitHub.md](https://github.com/user-attachments/files/33358200/README_GitHub.md)
+[README_GitHub.md](https://github.com/user-attachments/files/33358403/README_GitHub.md)
 # Análise de despesas parlamentares (2020–2025)
 
 Projeto de análise dos gastos registrados pela Câmara dos Deputados, com consolidação por parlamentar e região, análise de tendências, triagem estatística de lançamentos atípicos e projeção exploratória para 2026–2027.
@@ -42,6 +42,20 @@ Líderes por região no acumulado de seis anos:
 | Norte | Acácio Favacho | AP | R$ 3.192.714,55 |
 | Sudeste | Capitão Augusto | SP | R$ 2.906.317,25 |
 | Sul | Pompeo de Mattos | RS | R$ 3.315.952,92 |
+
+### Leitura inicial dos quatro maiores por região
+
+Os vinte parlamentares do ranking tiveram registros nos seis anos analisados, reduzindo o efeito de diferenças no tempo observado. A distância entre o primeiro e o quarto colocado ajuda a comparar a concentração dentro de cada grupo:
+
+| Região | Maior acumulado | Quarto colocado | Diferença entre eles | Leitura |
+|---|---:|---:|---:|---|
+| Centro-Oeste | Beto Pereira, MS | José Medeiros, MT | R$ 319.553,65 (10,3% do líder) | Maior dispersão relativa; os três primeiros são de MS. |
+| Nordeste | João Maia, RN | Wellington Roberto, PB | R$ 154.222,93 (4,6% do líder) | Ranking relativamente concentrado; os dois primeiros são do RN. |
+| Norte | Acácio Favacho, AP | Olival Marques, PA | R$ 18.195,39 (0,6% do líder) | Menor dispersão; os quatro valores são muito próximos. |
+| Sudeste | Capitão Augusto, SP | Da Vitoria, ES | R$ 103.020,38 (3,5% do líder) | Valores próximos; os dois primeiros são de SP. |
+| Sul | Pompeo de Mattos, RS | Bibo Nunes, RS | R$ 320.982,28 (9,7% do líder) | Maior diferença absoluta; os quatro primeiros são do RS. |
+
+João Maia (Nordeste) e Pompeo de Mattos (Sul) são os dois maiores valores regionais e diferem por apenas **R$ 1.256,96** no acumulado de seis anos. A concentração por UF descreve somente a composição deste ranking, não o gasto total de cada estado nem evidência de irregularidade.
 
 Projeção exploratória do modelo Ridge:
 
