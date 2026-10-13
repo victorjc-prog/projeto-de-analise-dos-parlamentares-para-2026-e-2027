@@ -18,46 +18,51 @@ O total líquido incluído na análise foi **R$ 1.333.828.027,97**. O total anua
 
 Nordeste e Sudeste concentraram os maiores totais regionais em 2025, com aproximadamente 30,9% e 32,3% do valor analisado, respectivamente. Em crescimento acumulado entre 2020 e 2025, Centro-Oeste e Sul avançaram cerca de 59% e 58%.
 
-## Quatro maiores por região
+## Quatro maiores por região em cada ano
 
-Soma de `vlrLiquido` por identificador de deputado e UF no período completo. O partido indicado é o do último registro observado.
+O ranking soma `vlrLiquido` por ID do deputado e UF dentro de cada ano; as posições não são acumuladas entre anos e podem mudar a cada edição.
 
-| Região | Parlamentar | UF | Partido | Gasto líquido 2020–2025 |
-|---|---|---:|---|---:|
-| Centro-Oeste | Beto Pereira | MS | REPUBLICANOS | R$ 3.104.848,23 |
-| Centro-Oeste | Dagoberto Nogueira | MS | PP | R$ 3.037.551,46 |
-| Centro-Oeste | Vander Loubet | MS | PT | R$ 2.913.347,08 |
-| Centro-Oeste | José Medeiros | MT | PL | R$ 2.785.294,58 |
-| Nordeste | João Maia | RN | PP | R$ 3.317.209,88 |
-| Nordeste | General Girão | RN | PL | R$ 3.270.844,20 |
-| Nordeste | Flávio Nogueira | PI | PT | R$ 3.180.307,51 |
-| Nordeste | Wellington Roberto | PB | PSD | R$ 3.162.986,95 |
-| Norte | Acácio Favacho | AP | MDB | R$ 3.192.714,55 |
-| Norte | Delegado Éder Mauro | PA | PL | R$ 3.186.016,40 |
-| Norte | Sidney Leite | AM | PSD | R$ 3.183.103,56 |
-| Norte | Olival Marques | PA | PODE | R$ 3.174.519,16 |
-| Sudeste | Capitão Augusto | SP | PL | R$ 2.906.317,25 |
-| Sudeste | Cezinha de Madureira | SP | PL | R$ 2.885.841,09 |
-| Sudeste | Odair Cunha | MG | PT | R$ 2.807.325,21 |
-| Sudeste | Da Vitoria | ES | PP | R$ 2.803.296,87 |
-| Sul | Pompeo de Mattos | RS | PDT | R$ 3.315.952,92 |
-| Sul | Giovani Cherini | RS | PL | R$ 3.117.112,38 |
-| Sul | Afonso Motta | RS | PDT | R$ 3.052.530,96 |
-| Sul | Bibo Nunes | RS | PL | R$ 2.994.970,64 |
+| Ano | Região | 1º | 2º | 3º | 4º |
+|---:|---|---|---|---|---|
+| 2020 | Norte | Jhonatan de Jesus (RR), R$ 551.380,32 | Jesus Sérgio (AC), R$ 543.409,93 | Marcelo Ramos (AM), R$ 538.354,87 | Jéssica Sales (AC), R$ 527.506,10 |
+| 2020 | Nordeste | João Maia (RN), R$ 526.271,01 | Wellington Roberto (PB), R$ 526.106,91 | João Marcelo Souza (MA), R$ 514.712,63 | José Guimarães (CE), R$ 508.971,91 |
+| 2020 | Centro-Oeste | Carlos Bezerra (MT), R$ 460.577,76 | Dagoberto Nogueira (MS), R$ 445.759,95 | Beto Pereira (MS), R$ 444.887,80 | José Nelto (GO), R$ 427.339,90 |
+| 2020 | Sudeste | Herculano Passos (SP), R$ 454.958,10 | Vinicius Carvalho (SP), R$ 453.641,39 | Dra. Soraya Manato (ES), R$ 445.263,70 | Paulo Teixeira (SP), R$ 444.612,49 |
+| 2020 | Sul | Nereu Crispim (RS), R$ 491.631,58 | Luisa Canziani (PR), R$ 469.075,94 | Roman (PR), R$ 466.912,08 | Gleisi Hoffmann (PR), R$ 466.801,61 |
+| 2021 | Norte | Edio Lopes (RR), R$ 541.431,66 | Joenia Wapichana (RR), R$ 539.838,78 | Perpétua Almeida (AC), R$ 534.692,55 | Jéssica Sales (AC), R$ 533.942,71 |
+| 2021 | Nordeste | Eduardo Bismarck (CE), R$ 566.706,26 | Carla Dickson (RN), R$ 524.552,72 | Efraim Filho (PB), R$ 517.791,91 | Wellington Roberto (PB), R$ 515.562,52 |
+| 2021 | Centro-Oeste | Beto Pereira (MS), R$ 501.448,15 | Dr. Luiz Ovando (MS), R$ 488.892,59 | Loester Trutis (MS), R$ 480.922,27 | Dagoberto Nogueira (MS), R$ 479.800,48 |
+| 2021 | Sudeste | Alexandre Leite (SP), R$ 475.193,76 | Lauriete (ES), R$ 460.550,39 | Neucimar Fraga (ES), R$ 457.898,78 | Herculano Passos (SP), R$ 456.297,04 |
+| 2021 | Sul | Giovani Cherini (RS), R$ 514.155,55 | Afonso Motta (RS), R$ 511.337,31 | Osmar Terra (RS), R$ 487.103,10 | Nereu Crispim (RS), R$ 486.220,40 |
+| 2022 | Norte | Joenia Wapichana (RR), R$ 563.759,50 | Jesus Sérgio (AC), R$ 548.923,13 | Edio Lopes (RR), R$ 544.950,69 | Ottaci Nascimento (RR), R$ 542.126,25 |
+| 2022 | Nordeste | José Airton Félix Cirilo (CE), R$ 526.215,85 | Marreca Filho (MA), R$ 523.635,85 | Júnior Mano (CE), R$ 521.462,33 | Heitor Freire (CE), R$ 520.790,63 |
+| 2022 | Centro-Oeste | Dagoberto Nogueira (MS), R$ 491.460,64 | Loester Trutis (MS), R$ 487.065,25 | Vander Loubet (MS), R$ 483.003,72 | Professora Rosa Neide (MT), R$ 477.353,88 |
+| 2022 | Sudeste | Gilberto Nascimento (SP), R$ 465.041,75 | Capitão Augusto (SP), R$ 460.752,48 | Orlando Silva (SP), R$ 460.393,69 | Coronel Tadeu (SP), R$ 456.073,06 |
+| 2022 | Sul | Covatti Filho (RS), R$ 508.792,99 | Bibo Nunes (RS), R$ 505.572,14 | Pedro Westphalen (RS), R$ 504.881,77 | Afonso Motta (RS), R$ 504.220,38 |
+| 2023 | Norte | Vinicius Gurgel (AP), R$ 597.229,43 | Acácio Favacho (AP), R$ 591.128,85 | Coronel Ulysses (AC), R$ 589.361,60 | Zé Haroldo Cathedral (RR), R$ 587.320,04 |
+| 2023 | Nordeste | General Girão (RN), R$ 619.991,85 | André Ferreira (PE), R$ 612.213,04 | Luizianne Lins (CE), R$ 587.806,32 | João Maia (RN), R$ 587.224,12 |
+| 2023 | Centro-Oeste | Beto Pereira (MS), R$ 608.522,56 | Vander Loubet (MS), R$ 563.078,95 | José Medeiros (MT), R$ 550.447,14 | Dr. Luiz Ovando (MS), R$ 520.559,10 |
+| 2023 | Sudeste | Capitão Augusto (SP), R$ 547.056,95 | Cezinha de Madureira (SP), R$ 545.231,54 | Tabata Amaral (SP), R$ 529.418,71 | Amaro Neto (ES), R$ 524.405,69 |
+| 2023 | Sul | Pompeo de Mattos (RS), R$ 653.696,75 | Pedro Westphalen (RS), R$ 594.957,63 | Bibo Nunes (RS), R$ 580.505,60 | Giovani Cherini (RS), R$ 575.539,57 |
+| 2024 | Norte | Zé Haroldo Cathedral (RR), R$ 633.590,14 | Gabriel Mota (RR), R$ 622.715,36 | Albuquerque (RR), R$ 618.284,19 | Defensor Stélio Dener (RR), R$ 614.005,49 |
+| 2024 | Nordeste | Lucas Ramos (PE), R$ 623.231,72 | André Ferreira (PE), R$ 615.959,83 | General Girão (RN), R$ 604.342,88 | João Maia (RN), R$ 604.006,03 |
+| 2024 | Centro-Oeste | Geraldo Resende (MS), R$ 574.083,10 | Dagoberto Nogueira (MS), R$ 563.249,67 | Rodolfo Nogueira (MS), R$ 555.517,15 | Coronel Fernanda (MT), R$ 552.063,67 |
+| 2024 | Sudeste | Gilberto Nascimento (SP), R$ 552.751,37 | Cezinha de Madureira (SP), R$ 549.494,22 | Ricardo Salles (SP), R$ 543.435,14 | Jonas Donizette (SP), R$ 538.659,93 |
+| 2024 | Sul | Pompeo de Mattos (RS), R$ 667.819,06 | Daiana Santos (RS), R$ 582.386,91 | Afonso Motta (RS), R$ 580.969,20 | Pedro Westphalen (RS), R$ 577.848,12 |
+| 2025 | Norte | Gabriel Mota (RR), R$ 621.578,60 | Eduardo Velloso (AC), R$ 608.822,06 | Albuquerque (RR), R$ 607.323,43 | Cristiane Lopes (RO), R$ 602.717,30 |
+| 2025 | Nordeste | General Girão (RN), R$ 583.965,76 | João Maia (RN), R$ 578.399,79 | Ruy Carneiro (PB), R$ 577.959,06 | Natália Bonavides (RN), R$ 573.830,35 |
+| 2025 | Centro-Oeste | Rodolfo Nogueira (MS), R$ 570.068,96 | Geraldo Resende (MS), R$ 562.066,17 | Rodrigo da Zaeli (MT), R$ 547.852,28 | Dagoberto Nogueira (MS), R$ 541.796,46 |
+| 2025 | Sudeste | Paulo Folletto (ES), R$ 540.891,83 | Bebeto (RJ), R$ 517.812,00 | Carlos Zarattini (SP), R$ 517.717,63 | Renata Abreu (SP), R$ 516.802,65 |
+| 2025 | Sul | Pompeo de Mattos (RS), R$ 591.318,51 | Heitor Schuch (RS), R$ 590.729,20 | Franciane Bayer (RS), R$ 558.795,95 | Bibo Nunes (RS), R$ 557.790,37 |
 
-### Leitura inicial do ranking
+O conjunto anual muda ao longo do tempo. A previsão 2026–2027 abaixo usa uma coorte distinta: os vinte maiores gastos acumulados de 2020–2025.
 
-Os vinte parlamentares listados tiveram registros nos seis anos analisados, então a comparação acumulada não se explica apenas por diferenças no número de anos com dados. A distância entre o primeiro e o quarto colocado varia bastante entre regiões:
+## Comportamento e tendências
 
-| Região | Maior acumulado | Quarto colocado | Diferença entre eles | Leitura |
-|---|---:|---:|---:|---|
-| Centro-Oeste | Beto Pereira, MS | José Medeiros, MT | R$ 319.553,65 (10,3% do líder) | Maior dispersão relativa; os três primeiros são de MS. |
-| Nordeste | João Maia, RN | Wellington Roberto, PB | R$ 154.222,93 (4,6% do líder) | Ranking relativamente concentrado; os dois primeiros são do RN. |
-| Norte | Acácio Favacho, AP | Olival Marques, PA | R$ 18.195,39 (0,6% do líder) | Menor dispersão; os quatro valores são muito próximos. |
-| Sudeste | Capitão Augusto, SP | Da Vitoria, ES | R$ 103.020,38 (3,5% do líder) | Valores próximos; os dois primeiros são de SP. |
-| Sul | Pompeo de Mattos, RS | Bibo Nunes, RS | R$ 320.982,28 (9,7% do líder) | Maior diferença absoluta; os quatro primeiros são do RS. |
-
-João Maia (Nordeste) e Pompeo de Mattos (Sul) são os dois maiores valores regionais e diferem por apenas **R$ 1.256,96** no acumulado de seis anos. A concentração por UF descreve apenas a composição deste ranking de maiores gastos; não significa, por si só, que a mesma UF lidere o gasto total da região ou que exista irregularidade.
+- O gasto nominal total avançou 21,0% em 2021, desacelerou em 2022 (+4,5%) e 2024 (+2,0%), voltou a crescer em 2023 (+11,9%) e caiu 4,0% em 2025. Mesmo após a queda, 2025 ficou 38,4% acima de 2020.
+- Entre 2020 e 2025, Centro-Oeste teve o maior crescimento regional relativo (+59,8%) e Sul veio em seguida (+58,5%). Em 2025, porém, representaram 8,0% e 15,3% do total analisado; Sudeste (32,3%) e Nordeste (30,9%) concentraram a maior parcela. Crescimento relativo não é o mesmo que participação no gasto total.
+- A liderança anual muda mais no Norte: houve seis líderes diferentes. No Sul, Pompeo de Mattos liderou em 2023, 2024 e 2025; no Nordeste, General Girão liderou em 2023 e 2025. Beto Pereira liderou o Centro-Oeste em 2021 e 2023; Gilberto Nascimento liderou o Sudeste em 2022 e 2024.
+- Nas 24 posições do top 4 anual em cada região nos seis anos, MS ocupou 18 no Centro-Oeste, RS ocupou 21 no Sul, SP ocupou 18 no Sudeste, RR ocupou 13 no Norte e RN ocupou 9 no Nordeste. Essas contagens descrevem quem aparece no ranking, não a participação dessas UFs no gasto regional total.
 
 ## Anomalias para revisão
 
@@ -74,7 +79,7 @@ O limite de triagem para o primeiro caso foi R$ 27.880,00. Esses valores são **
 
 ## Previsão individual para 2026–2027
 
-Foi ajustado um modelo Ridge regularizado por parlamentar, com efeito individual e tendência anual, usando os gastos líquidos anuais de 2020 a 2025. A tabela mostra previsões individuais para os quatro maiores acumulados de cada região. Valores nominais, sem correção pela inflação.
+Foi ajustado um modelo Ridge regularizado por parlamentar, com efeito individual e tendência anual, usando os gastos líquidos anuais de 2020 a 2025. A coorte prevista é formada pelos quatro maiores gastos acumulados de 2020–2025 em cada região; ela não é a união dos rankings anuais acima. Valores nominais, sem correção pela inflação.
 
 | Região | Parlamentar | UF | 2026 | 2027 |
 |---|---|---:|---:|---:|
